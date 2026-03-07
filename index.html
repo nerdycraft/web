@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NerdyCraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-bracket">[</span>NerdyCraft<span class="logo-bracket">]</span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="https://nerdybot.nerdycraft.de" class="btn-nav" target="_blank" rel="noopener noreferrer">Bot Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-tag">Est. as a Minecraft org &mdash; evolved into something bigger</div>
+        <h1>Welcome to <span class="highlight">NerdyCraft</span></h1>
+        <p class="hero-sub">
+          A small crew of nerds building tools for communities. What started as a Minecraft server
+          organisation now powers a Discord bot packed with World of Warcraft features &mdash; and
+          keeps a handful of side projects alive along the way.
+        </p>
+        <div class="hero-actions">
+          <a href="https://nerdybot.nerdycraft.de" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Open Bot Dashboard &rarr;
+          </a>
+          <a href="#projects" class="btn btn-secondary">See Projects</a>
+        </div>
+      </div>
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="card-icon">&#x1F3F0;</div>
+            <h3>Origins</h3>
+            <p>
+              NerdyCraft was born as a Minecraft server organisation. The repos from those days
+              are still around &mdash; a piece of history we keep intact.
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">&#x1F916;</div>
+            <h3>NerdyBot</h3>
+            <p>
+              The main focus today: a Discord bot built for World of Warcraft communities.
+              Guild management, WoW lookups, raid tooling &mdash; all in one place.
+              Manage it via the bot dashboard.
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon">&#x1F527;</div>
+            <h3>Side Projects</h3>
+            <p>
+              We also maintain PandaProxy, a multi-service proxy for BambuLab 3D printers,
+              alongside our archived Minecraft repositories.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-list">
+          <div class="project-item">
+            <div class="project-header">
+              <span class="project-badge badge-active">Active</span>
+              <h3>NerdyBot</h3>
+            </div>
+            <p>
+              A Discord bot specialising in World of Warcraft features. Character lookups,
+              guild tooling, and more &mdash; managed through a dedicated web dashboard.
+            </p>
+            <a href="https://nerdybot.nerdycraft.de" class="project-link" target="_blank" rel="noopener noreferrer">
+              Open Dashboard &rarr;
+            </a>
+          </div>
+
+          <div class="project-item">
+            <div class="project-header">
+              <span class="project-badge badge-active">Active</span>
+              <h3>PandaProxy</h3>
+            </div>
+            <p>
+              A multi-service proxy for BambuLab 3D printers that solves the limited
+              simultaneous connection problem in LAN/Development mode. Sits between the
+              printer and your client apps &mdash; proxying the camera feed, MQTT control
+              channel, and FTP &mdash; so tools like OctoApp, Bambuddy, and VLC can all
+              connect at the same time without reconfiguration.
+            </p>
+          </div>
+
+          <div class="project-item">
+            <div class="project-header">
+              <span class="project-badge badge-archived">Archived</span>
+              <h3>Minecraft Projects</h3>
+            </div>
+            <p>
+              The original NerdyCraft Minecraft server repositories. Preserved for nostalgia
+              and the occasional curious contributor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <div class="container cta-inner">
+        <h2>Ready to use NerdyBot?</h2>
+        <p>Head over to the bot dashboard to manage your Discord server&rsquo;s WoW features.</p>
+        <a href="https://nerdybot.nerdycraft.de" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          Go to Bot Dashboard &rarr;
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="logo-small"><span class="logo-bracket">[</span>NerdyCraft<span class="logo-bracket">]</span></span>
+      <span class="footer-copy">&copy; 2026 NerdyCraft Organisation</span>
+    </div>
+  </footer>
+</body>
+</html>
