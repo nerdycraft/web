@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Error &mdash; NerdyCraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-bracket">[</span>NerdyCraft<span class="logo-bracket">]</span>
+      </div>
+      <nav>
+        <a href="/#about">About</a>
+        <a href="/#projects">Projects</a>
+        <a href="https://nerdybot.nerdycraft.de" class="btn-nav" target="_blank" rel="noopener noreferrer">Bot Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="not-found">
+      <div class="not-found-code" id="error-code"></div>
+      <h1 class="not-found-title" id="error-title"></h1>
+      <p class="not-found-sub" id="error-sub"></p>
+      <a href="/" class="btn btn-primary">Back to Home &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    var ERRORS = {
+      '401': {
+        title: 'Unauthorized',
+        sub: 'You need to be authenticated to access this page. Please log in and try again.'
+      },
+      '403': {
+        title: 'Access denied',
+        sub: "You don't have permission to view this page. If you think this is a mistake, reach out."
+      },
+      '404': {
+        title: 'Page not found',
+        sub: "This page doesn't exist or has been moved. Head back to the home page and try again."
+      },
+      '500': {
+        title: 'Internal server error',
+        sub: "Something went wrong on our end. We're looking into it \u2014 try again in a moment."
+      },
+      '502': {
+        title: 'Bad gateway',
+        sub: 'The upstream server returned an invalid response. Please try again in a moment.'
+      },
+      '503': {
+        title: 'Service unavailable',
+        sub: 'The server is temporarily unable to handle your request. Please try again in a bit.'
+      }
+    };
+
+    var code = '__ERROR_CODE__';
+    var err = ERRORS[code] || { title: 'Unexpected error', sub: 'Something went wrong. Please try again or head back home.' };
+
+    document.getElementById('error-code').textContent = code;
+    document.getElementById('error-title').textContent = err.title;
+    document.getElementById('error-sub').textContent = err.sub;
+    document.getElementById('page-title').textContent = code + ' \u2014 NerdyCraft';
+  </script>
+</body>
+</html>
